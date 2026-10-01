@@ -1,0 +1,206 @@
+:root {
+    --color-principal: #ff6584;
+    --color-secundario: #fff0f3;
+    --color-texto: #4a4a4a;
+    --color-acento: #ff3366;
+    --color-celeste: #a0e7e5;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Bubblegum Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    padding-top: 110px; /* Para que el header fijo no pise el contenido */
+}
+
+header {
+    background-color: var(--color-principal);
+    background-image: url('https://i.pinimg.com/originals/83/2a/a7/832aa761fb5d5e9bca706d79e0abd4ff.jpg');
+    background-size: cover;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(255, 101, 132, 0.3);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-bottom: 4px dashed #fff;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff; 
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 0 #ff3366, 4px 4px 0 rgba(0, 0, 0, 0.1); 
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    background-color: var(--color-acento); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #ff477e;
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(255, 117, 140, 0.15);
+    border: 3px solid #ffe6eb;
+}
+
+h2, h3 {
+    color: var(--color-acento);
+}
+
+form div {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ff477e;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ffd1dc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: #fff9fb;
+}
+
+.grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta-producto img{
+    width: 200px;
+    height: 150px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto 1rem auto;
+}
+
+.tarjeta-producto {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--color-secundario);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    width: 250px;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 51, 102, 0.25);
+    border-color: var(--color-acento);
+}
+
+
+.tarjeta-producto h3 {
+    color: #ff3366;
+    margin: 0.5rem 0;
+}
+
+
+.tarjeta-producto p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.precio {
+    font-weight: bold;
+    color: #ff477e;
+    font-size: 1.1rem;
+    background-color: var(--color-secundario);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 3px 10px rgba(255, 51, 102, 0.3);
+}
+
+.btn-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    border: 3px solid white;
+}
+
+.btn-flotante:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--color-principal);
+    color: #fff;
+    margin-top: 3rem;
+}
+
+@media (max-width: 600px){
+  .grilla-productos {
+    grid-template-columns: 1fr;
+  }
+
+}
